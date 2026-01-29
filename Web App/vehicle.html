@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Vehicle</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/vehicle.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/995646d8ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li>
+                <h2>Dashboard</h2>
+            </li>
+            <li>
+                <a href="index.html">Device</a>
+            </li>
+            <li>
+                <a href="vehicle.html" class="active">Vehicle</a>
+            </li>
+            <li>
+                <a href="station.html">Station</a>
+            </li>
+            <li>
+                <a href="data.html">Data Log</a>
+            </li>
+        </ul>
+        <div class="humburger flex" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="vehicle">
+        <h1>Vehicle</h1>
+        <div class="flex flex-2">
+            <div class="card" id="map-container">
+                <div class="flex">
+                    <h3>GPS Location</h3>
+                    <span id="gps-status" class="status">Loading...</span>
+                </div>
+                <div id="map"></div>
+            </div>
+            <div id="move" class="flex center">
+                <div class="controls">
+                    <a href="#" id="ArrowUp"><i class="fa-solid fa-arrow-up-long"></i></a><br>
+                    <a href="#" id="ArrowLeft"><i class="fa-solid fa-arrow-left-long"></i></a>
+                    <a href="#" id="ArrowDown"><i class="fa-solid fa-arrow-down-long"></i></a>
+                    <a href="#" id="ArrowRight"><i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="alerts" class="alerts"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/vehicle.js" type="module"></script>
+</body>
+</html>

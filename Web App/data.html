@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Station</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li>
+                <h2>Dashboard</h2>
+            </li>
+            <li>
+                <a href="index.html">Device</a>
+            </li>
+            <li>
+                <a href="vehicle.html">Vehicle</a>
+            </li>
+            <li>
+                <a href="station.html">Station</a>
+            </li>
+            <li>
+                <a href="data.html" class="active">Data Log</a>
+            </li>
+        </ul>
+        <div class="humburger flex" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="station">
+        <h1>Data Log</h1>
+        <div class="card">
+            <h3>Data History</h3>
+            <table id="data-history">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Heart Rate (bpm)</th>
+                        <th>Oxygen Saturation (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="data-body">
+                    <tr>
+                        <td>A</td>
+                        <td>A</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div id="alerts" class="alerts"></div>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/data.js" type="module"></script>
+</body>
+</html>

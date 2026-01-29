@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Station</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/station.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/995646d8ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li>
+                <h2>Dashboard</h2>
+            </li>
+            <li>
+                <a href="index.html">Device</a>
+            </li>
+            <li>
+                <a href="vehicle.html">Vehicle</a>
+            </li>
+            <li>
+                <a href="station.html" class="active">Station</a>
+            </li>
+            <li>
+                <a href="data.html">Data Log</a>
+            </li>
+        </ul>
+        <div class="humburger flex" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="station">
+        <h1>Station</h1>
+        <div class="flex flex-2">
+            <div class="flex flex-2">
+                <div class="card" id="temperature">
+                    <div class="flex">
+                        <h3>Temperature</h3>
+                        <span id="temperature-status" class="status active">Active</span>
+                    </div>
+                    <p><span id="temperature-value">36.24</span> °C</p>
+                </div>
+                <div class="card" id="blood-oxygen">
+                    <div class="flex">
+                        <h3>Humidity</h3>
+                        <span id="oxygen-status" class="status active">Active</span>
+                    </div>
+                    <p><span id="oxygen-value">49.21</span>%</p>
+                </div>
+            </div>
+            <div class="flex flex-2">
+                <div class="earthquake">
+                    <h3>Earthquake Alarm</h3>
+                    <div class="flex center">
+                        <span class="alarm" id="earthquake-alarm"></span>
+                    </div>
+                </div>
+                <div class="fire">
+                    <h3>Fire Alarm</h3>
+                    <div class="flex center">
+                        <span class="alarm" id="fire-alarm"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="door">
+            <h3>Door</h3>
+            <div class="controls">
+                <a href="#" id="open"><i class="fa-solid fa-lock"></i></a>
+                <a href="#" id="close"><i class="fa-solid fa-lock-open"></i></a>
+            </div>
+        </div>
+    </section>
+    <div id="alerts" class="alerts"></div>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/station.js" type="module"></script>
+</body>
+</html>

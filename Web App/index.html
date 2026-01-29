@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Device</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <nav id="menu">
+        <ul>
+            <li>
+                <h2>Dashboard</h2>
+            </li>
+            <li>
+                <a href="index.html" class="active">Device</a>
+            </li>
+            <li>
+                <a href="vehicle.html">Vehicle</a>
+            </li>
+            <li>
+                <a href="station.html">Station</a>
+            </li>
+            <li>
+                <a href="data.html">Data Log</a>
+            </li>
+        </ul>
+        <div class="humburger flex" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section class="device">
+        <h1>Device</h1>
+        <div class="card" id="map-container">
+            <div class="flex">
+                <h3>GPS Location</h3>
+                <span id="gps-status" class="status">Loading...</span>
+            </div>
+            <div id="map"></div>
+        </div>
+        <div class="flex flex-2">
+            <div class="card" id="heart-rate-chart">
+                <div class="flex">
+                    <h3>Heart Rate</h3>
+                    <span id="heart-status" class="status">Loading...</span>
+                </div>
+                <div id="heartRateChart"></div>
+            </div>
+            <div class="flex flex-2">
+                <div class="card" id="temperature">
+                    <div class="flex">
+                        <h3>Temperature</h3>
+                        <span id="temperature-status" class="status">Loading...</span>
+                    </div>
+                    <p><span id="temperature-value">Loading...</span> °C</p>
+                </div>
+                <div class="card" id="blood-oxygen">
+                    <div class="flex">
+                        <h3>UV Index</h3>
+                        <span id="oxygen-status" class="status">Loading...</span>
+                    </div>
+                    <p><span id="oxygen-value">Loading...</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="alerts" class="alerts"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/device.js" type="module"></script>
+</body>
+</html>
